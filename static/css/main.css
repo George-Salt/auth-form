@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+
+
+@keyframes parallax-background {
+  to {
+    background-position: 50% 15%;
+  }
+}
+
+
+@keyframes parallax-form {
+  10% {
+    transform: translateX(-5px);
+  }
+
+  20% {
+    transform: translateX(0);
+  }
+
+  30% {
+    transform: translateX(5px);
+  }
+
+  40% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-5px);
+  }
+
+  60% {
+    transform: translateX(0);
+  }
+
+  70% {
+    transform: translateX(5px);
+  }
+
+  80% {
+    transform: translateX(0);
+  }
+
+  90% {
+    transform: translateX(-5px);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: black;
+  overflow: hidden;
+  background-image: url("../imgs/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: parallax-background 4s alternate infinite linear;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .auth {
+  width: 30%;
+  padding: 30px 35px 50px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 100px black;
+}
+
+main > .auth h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+main > .auth form {
+  display: flex;
+  flex-direction: column;
+}
+
+main > .auth input {
+  font-family: "Ubuntu", sans-serif;
+  width: calc(100% - 34px);
+  border: 2px solid #ebebeb;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+
+main > .auth input:hover {
+  border-color: #b13f3f;
+  cursor: pointer;
+}
+
+main > .auth .reset-password {
+  color: #b13f3f;
+  font-size: 12px;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: all 0.5s;
+}
+
+main > .auth .reset-password:hover {
+  color: #722626;
+}
+
+main > .auth .button {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background-color: #b13f3f;
+  width: calc(100% - 34px);
+  font-size: 16px;
+  padding: 17px;
+  border-radius: 20px;
+  margin-top: 15px;
+  border: none;
+  transition: all 0.5s;
+}
+
+main > .auth .button:hover {
+  background-color: #722626;
+  cursor: pointer;
+}
+
+main > .auth .wrong {
+  color: #b13f3f;
+  font-size: 12px;
+  text-decoration: none;
+  align-self: flex-start;
+  margin-bottom: -12px;
+  display: none;
+}
